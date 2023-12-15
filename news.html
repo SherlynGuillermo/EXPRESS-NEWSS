@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(background.jpg);
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+main {
+  padding: 20px;
+}
+
+article {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+}
+
+#about1{
+  font-family: serif;
+  text-align:justify;
+  margin-left: 20%;
+  margin-right: 20%;
+  font-size: 100%;
+  color: #fff;
+}
+ #pic1{
+  width: 50%;
+ }
+
+ #pic2{
+  width: 50%;
+ }
+
+ #newsto{
+  display: flex;
+ }
+ .news1{
+ margin-right: 10%;
+ }
+ section{
+  justify-content: center;
+ }
+ 
+</style>
+<body>
+    <main>
+        <header>
+          <h1 style="color: #fff;">Welcome to Express News</h1>
+            <nav>
+              <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="news.html"><strong style="color: yellow;">Submit News</strong></a></li>
+                <li><a href="contact.html">Contact us</a></li>
+              </ul>
+            </nav>
+          </header>
+          <section id="submit">
+            <h2 style="color: #fff;">Submit News</h2>
+            <form action="#home" method="post">
+              <label for="newsTitle" style="color: #fff;">Title:</label>
+              <input type="text" id="newsTitle" name="newsTitle" required><br><br>
+              
+              <form action="submit_image.php" method="post" enctype="multipart/form-data">
+                <input type="file" name="imageFile" style="color: #fff;" id="imageFile" accept="image/*">
+                <input type="submit" value="Upload Image" name="submit">
+              </form>
+              
+              <label for="newsContent" style="color: #fff;">Content:</label><br>
+              <textarea id="newsContent" name="newsContent" rows="4" cols="50" required></textarea><br><br>
+              
+              <input type="submit" value="Submit">
+            </form>
+          </section>
+    </main>
+    
+</body>
+</html>
